@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MathPaper
@@ -16,47 +10,66 @@ namespace MathPaper
         {
             InitializeComponent();
 
-            textBox3.Text = "Result";
-            textBox6.Text = "Result";
-            textBox9.Text = "Result";
-            textBox12.Text = "Result";
+            risultatoTxtBox.Text = "0";
             textBox14.Text = "Result";
             textBox16.Text = "Result";
             textBox18.Text = "Result";
             textBox20.Text = "Result";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void calcolaBtn_Click(object sender, EventArgs e)
         {
+            double num1;
+            double num2;
+            double result = 0;
+            if (! double.TryParse(number1txtBox.Text, out num1))
+            {
+                MessageBox.Show("ERROR: first operator is not a number", "ERROR");
+            }
+            else
+            {
+                if (!double.TryParse(number2txtBox.Text, out num2))
+                {
+                    MessageBox.Show("ERROR: second operator is not a number", "ERROR");
+                }
+                else
+                {
+                    switch (operatorComboBox.Text)
+                    {
+                        case "+":
+                            result = num1 + num2;
+                            break;
+                        case "-":
+                            result = num1 - num2;
+                            break;
+                        case "x":
+                            result = num1 * num2;
+                            break;
+                        case ":":
+                            result = num1 / num2;
+                            break;
+                    }
+                    risultatoTxtBox.Text = result.ToString();
+                }
+                        
+            }
 
-        }
-
-        private void adunareBtn_Click(object sender, EventArgs e)
-        {
-            float num1 = 0;
-            num1 = Convert.ToInt32(textBox1.Text);
-
-            float num2 = 0;
-            num2 = Convert.ToInt32(textBox2.Text);
-
-            float num3 = num1 + num2;
-
-            textBox3.Text = num3.ToString();
         }
 
         private void textBox1_Validating(object sender, CancelEventArgs e)
         {
             float num1 = 0;
 
-            if (!float.TryParse(textBox1.Text, out num1))
+            if (!float.TryParse(number1txtBox.Text, out num1))
             {
-                if (textBox1.Text == "")
+                if (number1txtBox.Text == "")
                     MessageBox.Show("ERROR! Complete all!");
                 else
                     MessageBox.Show("ERROR!");
 
-                textBox1.Clear();
-                textBox1.Focus();
+                number1txtBox.Clear();
+                number1txtBox.Focus();
             }
         }
 
@@ -64,197 +77,195 @@ namespace MathPaper
         {
             float num2 = 0;
 
-            if (!float.TryParse(textBox2.Text, out num2))
+            if (!float.TryParse(number2txtBox.Text, out num2))
             {
-                if (textBox2.Text == "")
+                if (number2txtBox.Text == "")
                     MessageBox.Show("ERROR! Complete all!");
                 else
                     MessageBox.Show("ERROR!");
 
-                textBox2.Clear();
-                textBox2.Focus();
+                number2txtBox.Clear();
+                number2txtBox.Focus();
             }
         }
 
         private void acBtn1_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Text = "Result";
+            resetBasicTxtbox();
         }
 
         private void scadereBtn_Click(object sender, EventArgs e)
         {
-            float num4 = 0;
-            num4 = Convert.ToInt32(textBox4.Text);
+            //float num4 = 0;
+            //num4 = Convert.ToInt32(textBox4.Text);
 
-            float num5 = 0;
-            num5 = Convert.ToInt32(textBox5.Text);
+            //float num5 = 0;
+            //num5 = Convert.ToInt32(textBox5.Text);
 
-            float num6 = num4 - num5;
+            //float num6 = num4 - num5;
 
-            textBox6.Text = num6.ToString();
+            //textBox6.Text = num6.ToString();
         }
 
         private void textBox4_Validating(object sender, CancelEventArgs e)
         {
-            float num4 = 0;
+            //float num4 = 0;
 
-            if (!float.TryParse(textBox4.Text, out num4))
-            {
-                if (textBox4.Text == "")
-                    MessageBox.Show("ERROR! Complete all!");
-                else
-                    MessageBox.Show("ERROR!");
+            //if (!float.TryParse(textBox4.Text, out num4))
+            //{
+            //    if (textBox4.Text == "")
+            //        MessageBox.Show("ERROR! Complete all!");
+            //    else
+            //        MessageBox.Show("ERROR!");
 
-                textBox4.Clear();
-                textBox4.Focus();
-            }
+            //    textBox4.Clear();
+            //    textBox4.Focus();
+            //}
         }
 
         private void textBox5_Validating(object sender, CancelEventArgs e)
         {
-            float num5 = 0;
+            //float num5 = 0;
 
-            if (!float.TryParse(textBox5.Text, out num5))
-            {
-                if (textBox5.Text == "")
-                    MessageBox.Show("ERROR! Complete all!");
-                else
-                    MessageBox.Show("ERROR!");
+            //if (!float.TryParse(textBox5.Text, out num5))
+            //{
+            //    if (textBox5.Text == "")
+            //        MessageBox.Show("ERROR! Complete all!");
+            //    else
+            //        MessageBox.Show("ERROR!");
 
-                textBox5.Clear();
-                textBox5.Focus();
-            }
+            //    textBox5.Clear();
+            //    textBox5.Focus();
+            //}
         }
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Text = "Result";
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Text = "Result";
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox9.Text = "Result";
-            textBox10.Clear();
-            textBox11.Clear();
-            textBox12.Text = "Result";
+            number1txtBox.Clear();
+            number2txtBox.Clear();
+            risultatoTxtBox.Text = "Result";
+            //textBox4.Clear();
+            //textBox5.Clear();
+            //textBox6.Text = "Result";
+            //textBox7.Clear();
+            //textBox8.Clear();
+            //textBox9.Text = "Result";
+            //textBox10.Clear();
+            //textBox11.Clear();
+            //textBox12.Text = "Result";
         }
 
         private void inmultireBtn_Click(object sender, EventArgs e)
         {
-            float num7 = 0;
-            num7 = Convert.ToInt32(textBox7.Text);
+            //float num7 = 0;
+            //num7 = Convert.ToInt32(textBox7.Text);
 
-            float num8 = 0;
-            num8 = Convert.ToInt32(textBox8.Text);
+            //float num8 = 0;
+            //num8 = Convert.ToInt32(textBox8.Text);
 
-            float num9 = num7 * num8;
+            //float num9 = num7 * num8;
 
-            textBox9.Text = num9.ToString();
+            //textBox9.Text = num9.ToString();
         }
 
         private void textBox7_Validating(object sender, CancelEventArgs e)
         {
-            float num7 = 0;
+            //float num7 = 0;
 
-            if (!float.TryParse(textBox7.Text, out num7))
-            {
-                if (textBox7.Text == "")
-                    MessageBox.Show("ERROR! Complete all!");
-                else
-                    MessageBox.Show("ERROR!");
+            //if (!float.TryParse(textBox7.Text, out num7))
+            //{
+            //    if (textBox7.Text == "")
+            //        MessageBox.Show("ERROR! Complete all!");
+            //    else
+            //        MessageBox.Show("ERROR!");
 
-                textBox7.Clear();
-                textBox7.Focus();
-            }
+            //    textBox7.Clear();
+            //    textBox7.Focus();
+            //}
         }
 
         private void textBox8_Validating(object sender, CancelEventArgs e)
         {
-            float num8 = 0;
+            //float num8 = 0;
 
-            if (!float.TryParse(textBox8.Text, out num8))
-            {
-                if (textBox8.Text == "")
-                    MessageBox.Show("ERROR! Complete all!");
-                else
-                    MessageBox.Show("ERROR!");
-                textBox8.Clear();
-                textBox8.Focus();
-            }
+            //if (!float.TryParse(textBox8.Text, out num8))
+            //{
+            //    if (textBox8.Text == "")
+            //        MessageBox.Show("ERROR! Complete all!");
+            //    else
+            //        MessageBox.Show("ERROR!");
+            //    textBox8.Clear();
+            //    textBox8.Focus();
+            //}
 
         }
 
         private void acBtn3_Click(object sender, EventArgs e)
         {
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox9.Text = "Result";
+            //textBox7.Clear();
+            //textBox8.Clear();
+            //textBox9.Text = "Result";
         }
 
         private void impartireBtn_Click(object sender, EventArgs e)
         {
-            float num10 = 0;
-            num10 = Convert.ToInt32(textBox10.Text);
+            //float num10 = 0;
+            //num10 = Convert.ToInt32(textBox10.Text);
 
-            float num11 = 0;
-            num11 = Convert.ToInt32(textBox11.Text);
+            //float num11 = 0;
+            //num11 = Convert.ToInt32(textBox11.Text);
 
-            float num12 = num10 / num11;
+            //float num12 = num10 / num11;
 
-            textBox12.Text = num12.ToString();
+            //textBox12.Text = num12.ToString();
         }
 
         private void textBox10_Validating(object sender, CancelEventArgs e)
         {
-            float num10 = 0;
+            //float num10 = 0;
 
-            if (!float.TryParse(textBox10.Text, out num10))
-            {
-                if (textBox10.Text == "")
-                    MessageBox.Show("ERROR! Complete all!");
-                else
-                    MessageBox.Show("ERROR!");
+            //if (!float.TryParse(textBox10.Text, out num10))
+            //{
+            //    if (textBox10.Text == "")
+            //        MessageBox.Show("ERROR! Complete all!");
+            //    else
+            //        MessageBox.Show("ERROR!");
 
-                textBox10.Clear();
-                textBox10.Focus();
-            }
+            //    textBox10.Clear();
+            //    textBox10.Focus();
+            //}
         }
 
         private void textBox11_Validating(object sender, CancelEventArgs e)
         {
-            float num11 = 0;
+            //float num11 = 0;
 
-            if (!float.TryParse(textBox11.Text, out num11))
-            {
-                if (textBox11.Text == "")
-                    MessageBox.Show("ERROR! Complete all!");
-                else
-                    MessageBox.Show("ERROR!");
+            //if (!float.TryParse(textBox11.Text, out num11))
+            //{
+            //    if (textBox11.Text == "")
+            //        MessageBox.Show("ERROR! Complete all!");
+            //    else
+            //        MessageBox.Show("ERROR!");
 
-                textBox11.Clear();
-                textBox11.Focus();
-            }
+            //    textBox11.Clear();
+            //    textBox11.Focus();
+            //}
 
         }
 
-        private void acBtn4_Click(object sender, EventArgs e)
-        {
-            textBox10.Clear();
-            textBox11.Clear();
-            textBox12.Text = "Result";
-        }
+        //private void acBtn4_Click(object sender, EventArgs e)
+        //{
+        //    textBox10.Clear();
+        //    textBox11.Clear();
+        //    textBox12.Text = "Result";
+        //}
 
-        private void acBtn2_Click(object sender, EventArgs e)
-        {
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Text = "Result";
-        }
+        //private void acBtn2_Click(object sender, EventArgs e)
+        //{
+        //    textBox4.Clear();
+        //    textBox5.Clear();
+        //    textBox6.Text = "Result";
+        //}
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -398,18 +409,18 @@ namespace MathPaper
 
         private void button5_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Text = "Result";
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Text = "Result";
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox9.Text = "Result";
-            textBox10.Clear();
-            textBox11.Clear();
-            textBox12.Text = "Result";
+            number1txtBox.Clear();
+            number2txtBox.Clear();
+            risultatoTxtBox.Text = "Result";
+            //textBox4.Clear();
+            //textBox5.Clear();
+            //textBox6.Text = "Result";
+            //textBox7.Clear();
+            //textBox8.Clear();
+            //textBox9.Text = "Result";
+            //textBox10.Clear();
+            //textBox11.Clear();
+            //textBox12.Text = "Result";
             textBox13.Clear();
             textBox14.Text = "Result";
             textBox15.Clear();
@@ -455,98 +466,53 @@ namespace MathPaper
 
         }
 
-        private void button13_Click(object sender, EventArgs e)
-        {
-             
-        }
-
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Text = "Result";
-        }
-
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Text = "Result";
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Text = "Result";
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox9.Text = "Result";
-            textBox10.Clear();
-            textBox11.Clear();
-            textBox12.Text = "Result";
+            resetBasicTxtbox();
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Text = "Result";
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Text = "Result";
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox9.Text = "Result";
-            textBox10.Clear();
-            textBox11.Clear();
-            textBox12.Text = "Result";
-            textBox13.Clear();
-            textBox14.Text = "Result";
-            textBox15.Clear();
-            textBox16.Text = "Result";
-            textBox17.Clear();
-            textBox18.Text = "Result";
-            textBox19.Clear();
-            textBox20.Text = "Result";
-            labelX.Text = "number x";
-            textBox21.Clear();
-            textBox22.Clear();
+            resetAllTxtbox();
         }
 
-        private void toolStripMenuItem4_Click(object sender, EventArgs e)
-        {
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Text = "Result";
-        }
+        //private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        //{
+        //    textBox4.Clear();
+        //    textBox5.Clear();
+        //    textBox6.Text = "Result";
+        //}
 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Text = "Result";
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Text = "Result";
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox9.Text = "Result";
-            textBox10.Clear();
-            textBox11.Clear();
-            textBox12.Text = "Result";
+            number1txtBox.Clear();
+            number2txtBox.Clear();
+            risultatoTxtBox.Text = "Result";
+            //textBox4.Clear();
+            //textBox5.Clear();
+            //textBox6.Text = "Result";
+            //textBox7.Clear();
+            //textBox8.Clear();
+            //textBox9.Text = "Result";
+            //textBox10.Clear();
+            //textBox11.Clear();
+            //textBox12.Text = "Result";
         }
 
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Text = "Result";
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Text = "Result";
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox9.Text = "Result";
-            textBox10.Clear();
-            textBox11.Clear();
-            textBox12.Text = "Result";
+            number1txtBox.Clear();
+            number2txtBox.Clear();
+            risultatoTxtBox.Text = "Result";
+            //textBox4.Clear();
+            //textBox5.Clear();
+            //textBox6.Text = "Result";
+            //textBox7.Clear();
+            //textBox8.Clear();
+            //textBox9.Text = "Result";
+            //textBox10.Clear();
+            //textBox11.Clear();
+            //textBox12.Text = "Result";
             textBox13.Clear();
             textBox14.Text = "Result";
             textBox15.Clear();
@@ -560,43 +526,43 @@ namespace MathPaper
             textBox22.Clear();
         }
 
-        private void toolStripMenuItem7_Click(object sender, EventArgs e)
-        {
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox9.Text = "Result";
-        }
+        //private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        //{
+        //    textBox7.Clear();
+        //    textBox8.Clear();
+        //    textBox9.Text = "Result";
+        //}
 
         private void toolStripMenuItem8_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Text = "Result";
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Text = "Result";
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox9.Text = "Result";
-            textBox10.Clear();
-            textBox11.Clear();
-            textBox12.Text = "Result";
+            number1txtBox.Clear();
+            number2txtBox.Clear();
+            risultatoTxtBox.Text = "Result";
+            //textBox4.Clear();
+            //textBox5.Clear();
+            //textBox6.Text = "Result";
+            //textBox7.Clear();
+            //textBox8.Clear();
+            //textBox9.Text = "Result";
+            //textBox10.Clear();
+            //textBox11.Clear();
+            //textBox12.Text = "Result";
         }
 
         private void toolStripMenuItem9_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Text = "Result";
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Text = "Result";
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox9.Text = "Result";
-            textBox10.Clear();
-            textBox11.Clear();
-            textBox12.Text = "Result";
+            number1txtBox.Clear();
+            number2txtBox.Clear();
+            risultatoTxtBox.Text = "Result";
+            //textBox4.Clear();
+            //textBox5.Clear();
+            //textBox6.Text = "Result";
+            //textBox7.Clear();
+            //textBox8.Clear();
+            //textBox9.Text = "Result";
+            //textBox10.Clear();
+            //textBox11.Clear();
+            //textBox12.Text = "Result";
             textBox13.Clear();
             textBox14.Text = "Result";
             textBox15.Clear();
@@ -610,43 +576,43 @@ namespace MathPaper
             textBox22.Clear();
         }
 
-        private void toolStripMenuItem10_Click(object sender, EventArgs e)
-        {
-            textBox10.Clear();
-            textBox11.Clear();
-            textBox12.Text = "Result";
-        }
+        //private void toolStripMenuItem10_Click(object sender, EventArgs e)
+        //{
+        //    textBox10.Clear();
+        //    textBox11.Clear();
+        //    textBox12.Text = "Result";
+        //}
 
         private void toolStripMenuItem11_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Text = "Result";
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Text = "Result";
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox9.Text = "Result";
-            textBox10.Clear();
-            textBox11.Clear();
-            textBox12.Text = "Result";
+            number1txtBox.Clear();
+            number2txtBox.Clear();
+            risultatoTxtBox.Text = "Result";
+            //textBox4.Clear();
+            //textBox5.Clear();
+            //textBox6.Text = "Result";
+            //textBox7.Clear();
+            //textBox8.Clear();
+            //textBox9.Text = "Result";
+            //textBox10.Clear();
+            //textBox11.Clear();
+            //textBox12.Text = "Result";
         }
 
         private void toolStripMenuItem12_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Text = "Result";
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Text = "Result";
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox9.Text = "Result";
-            textBox10.Clear();
-            textBox11.Clear();
-            textBox12.Text = "Result";
+            number1txtBox.Clear();
+            number2txtBox.Clear();
+            risultatoTxtBox.Text = "Result";
+            //textBox4.Clear();
+            //textBox5.Clear();
+            //textBox6.Text = "Result";
+            //textBox7.Clear();
+            //textBox8.Clear();
+            //textBox9.Text = "Result";
+            //textBox10.Clear();
+            //textBox11.Clear();
+            //textBox12.Text = "Result";
             textBox13.Clear();
             textBox14.Text = "Result";
             textBox15.Clear();
@@ -685,18 +651,18 @@ namespace MathPaper
 
         private void toolStripMenuItem15_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Text = "Result";
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Text = "Result";
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox9.Text = "Result";
-            textBox10.Clear();
-            textBox11.Clear();
-            textBox12.Text = "Result";
+            number1txtBox.Clear();
+            number2txtBox.Clear();
+            risultatoTxtBox.Text = "Result";
+            //textBox4.Clear();
+            //textBox5.Clear();
+            //textBox6.Text = "Result";
+            //textBox7.Clear();
+            //textBox8.Clear();
+            //textBox9.Text = "Result";
+            //textBox10.Clear();
+            //textBox11.Clear();
+            //textBox12.Text = "Result";
             textBox13.Clear();
             textBox14.Text = "Result";
             textBox15.Clear();
@@ -730,18 +696,18 @@ namespace MathPaper
 
         private void toolStripMenuItem18_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Text = "Result";
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Text = "Result";
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox9.Text = "Result";
-            textBox10.Clear();
-            textBox11.Clear();
-            textBox12.Text = "Result";
+            number1txtBox.Clear();
+            number2txtBox.Clear();
+            risultatoTxtBox.Text = "Result";
+            //textBox4.Clear();
+            //textBox5.Clear();
+            //textBox6.Text = "Result";
+            //textBox7.Clear();
+            //textBox8.Clear();
+            //textBox9.Text = "Result";
+            //textBox10.Clear();
+            //textBox11.Clear();
+            //textBox12.Text = "Result";
             textBox13.Clear();
             textBox14.Text = "Result";
             textBox15.Clear();
@@ -775,18 +741,18 @@ namespace MathPaper
 
         private void toolStripMenuItem21_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Text = "Result";
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Text = "Result";
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox9.Text = "Result";
-            textBox10.Clear();
-            textBox11.Clear();
-            textBox12.Text = "Result";
+            number1txtBox.Clear();
+            number2txtBox.Clear();
+            risultatoTxtBox.Text = "Result";
+            //textBox4.Clear();
+            //textBox5.Clear();
+            //textBox6.Text = "Result";
+            //textBox7.Clear();
+            //textBox8.Clear();
+            //textBox9.Text = "Result";
+            //textBox10.Clear();
+            //textBox11.Clear();
+            //textBox12.Text = "Result";
             textBox13.Clear();
             textBox14.Text = "Result";
             textBox15.Clear();
@@ -820,18 +786,18 @@ namespace MathPaper
 
         private void toolStripMenuItem24_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Text = "Result";
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Text = "Result";
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox9.Text = "Result";
-            textBox10.Clear();
-            textBox11.Clear();
-            textBox12.Text = "Result";
+            number1txtBox.Clear();
+            number2txtBox.Clear();
+            risultatoTxtBox.Text = "Result";
+            //textBox4.Clear();
+            //textBox5.Clear();
+            //textBox6.Text = "Result";
+            //textBox7.Clear();
+            //textBox8.Clear();
+            //textBox9.Text = "Result";
+            //textBox10.Clear();
+            //textBox11.Clear();
+            //textBox12.Text = "Result";
             textBox13.Clear();
             textBox14.Text = "Result";
             textBox15.Clear();
@@ -859,18 +825,18 @@ namespace MathPaper
 
         private void toolStripMenuItem27_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Text = "Result";
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Text = "Result";
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox9.Text = "Result";
-            textBox10.Clear();
-            textBox11.Clear();
-            textBox12.Text = "Result";
+            number1txtBox.Clear();
+            number2txtBox.Clear();
+            risultatoTxtBox.Text = "Result";
+            //textBox4.Clear();
+            //textBox5.Clear();
+            //textBox6.Text = "Result";
+            //textBox7.Clear();
+            //textBox8.Clear();
+            //textBox9.Text = "Result";
+            //textBox10.Clear();
+            //textBox11.Clear();
+            //textBox12.Text = "Result";
             textBox13.Clear();
             textBox14.Text = "Result";
             textBox15.Clear();
@@ -898,18 +864,18 @@ namespace MathPaper
 
         private void toolStripMenuItem30_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Text = "Result";
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Text = "Result";
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox9.Text = "Result";
-            textBox10.Clear();
-            textBox11.Clear();
-            textBox12.Text = "Result";
+            number1txtBox.Clear();
+            number2txtBox.Clear();
+            risultatoTxtBox.Text = "Result";
+            //textBox4.Clear();
+            //textBox5.Clear();
+            //textBox6.Text = "Result";
+            //textBox7.Clear();
+            //textBox8.Clear();
+            //textBox9.Text = "Result";
+            //textBox10.Clear();
+            //textBox11.Clear();
+            //textBox12.Text = "Result";
             textBox13.Clear();
             textBox14.Text = "Result";
             textBox15.Clear();
@@ -937,18 +903,18 @@ namespace MathPaper
 
         private void toolStripMenuItem33_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Text = "Result";
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Text = "Result";
-            textBox7.Clear();
-            textBox8.Clear();
-            textBox9.Text = "Result";
-            textBox10.Clear();
-            textBox11.Clear();
-            textBox12.Text = "Result";
+            number1txtBox.Clear();
+            number2txtBox.Clear();
+            risultatoTxtBox.Text = "Result";
+            //textBox4.Clear();
+            //textBox5.Clear();
+            //textBox6.Text = "Result";
+            //textBox7.Clear();
+            //textBox8.Clear();
+            //textBox9.Text = "Result";
+            //textBox10.Clear();
+            //textBox11.Clear();
+            //textBox12.Text = "Result";
             textBox13.Clear();
             textBox14.Text = "Result";
             textBox15.Clear();
@@ -960,6 +926,23 @@ namespace MathPaper
             labelX.Text = "number x";
             textBox21.Clear();
             textBox22.Clear();
+        }
+
+        void resetBasicTxtbox()
+        {
+            number1txtBox.Text = "0";
+            number2txtBox.Text = "0";
+            risultatoTxtBox.Text = "0";
+        }
+
+        void resetAllTxtbox()
+        {
+            resetBasicTxtbox();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

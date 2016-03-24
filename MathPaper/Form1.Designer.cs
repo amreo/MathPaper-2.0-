@@ -41,11 +41,10 @@
             this.acBtn7 = new System.Windows.Forms.Button();
             this.acBtn6 = new System.Windows.Forms.Button();
             this.acBtn5 = new System.Windows.Forms.Button();
-            this.acBtn4 = new System.Windows.Forms.Button();
-            this.acBtn3 = new System.Windows.Forms.Button();
-            this.acBtn2 = new System.Windows.Forms.Button();
-            this.acBtn1 = new System.Windows.Forms.Button();
-            this.clearBtn1 = new System.Windows.Forms.Button();
+            this.resettaBtn1 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.clearBtn2 = new System.Windows.Forms.Button();
             this.labelPow3 = new System.Windows.Forms.Label();
             this.labelPow2 = new System.Windows.Forms.Label();
@@ -73,42 +72,22 @@
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.labelImpartit = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip4 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
-            this.inmultireBtn = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.labelOri = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip3 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
-            this.impartireBtn = new System.Windows.Forms.Button();
-            this.labelMinus = new System.Windows.Forms.Label();
-            this.scadereBtn = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.labelPlus = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.adunareBtn = new System.Windows.Forms.Button();
+            this.risultatoTxtBox = new System.Windows.Forms.TextBox();
+            this.number2txtBox = new System.Windows.Forms.TextBox();
+            this.number1txtBox = new System.Windows.Forms.TextBox();
+            this.calcolaBtn = new System.Windows.Forms.Button();
             this.clearAllBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox21 = new System.Windows.Forms.TextBox();
@@ -135,14 +114,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label7 = new System.Windows.Forms.Label();
+            this.operatorComboBox = new System.Windows.Forms.ComboBox();
             this.contextMenuStrip8.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip7.SuspendLayout();
             this.contextMenuStrip6.SuspendLayout();
             this.contextMenuStrip5.SuspendLayout();
             this.contextMenuStrip4.SuspendLayout();
             this.contextMenuStrip3.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip9.SuspendLayout();
             this.contextMenuStrip10.SuspendLayout();
             this.contextMenuStrip11.SuspendLayout();
@@ -151,7 +131,7 @@
             // labelPow4
             // 
             this.labelPow4.AutoSize = true;
-            this.labelPow4.Location = new System.Drawing.Point(66, 366);
+            this.labelPow4.Location = new System.Drawing.Point(66, 217);
             this.labelPow4.Name = "labelPow4";
             this.labelPow4.Size = new System.Drawing.Size(36, 13);
             this.labelPow4.TabIndex = 114;
@@ -160,7 +140,7 @@
             // acBtn8
             // 
             this.acBtn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.acBtn8.Location = new System.Drawing.Point(282, 355);
+            this.acBtn8.Location = new System.Drawing.Point(282, 206);
             this.acBtn8.Name = "acBtn8";
             this.acBtn8.Size = new System.Drawing.Size(43, 32);
             this.acBtn8.TabIndex = 113;
@@ -172,7 +152,7 @@
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Red;
-            this.button4.Location = new System.Drawing.Point(127, 355);
+            this.button4.Location = new System.Drawing.Point(127, 206);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(33, 33);
             this.button4.TabIndex = 112;
@@ -182,7 +162,7 @@
             // 
             // textBox19
             // 
-            this.textBox19.Location = new System.Drawing.Point(17, 363);
+            this.textBox19.Location = new System.Drawing.Point(17, 214);
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(43, 20);
             this.textBox19.TabIndex = 111;
@@ -219,7 +199,7 @@
             "100"});
             this.textBox20.BackColor = System.Drawing.SystemColors.Window;
             this.textBox20.ContextMenuStrip = this.contextMenuStrip8;
-            this.textBox20.Location = new System.Drawing.Point(166, 363);
+            this.textBox20.Location = new System.Drawing.Point(166, 214);
             this.textBox20.Name = "textBox20";
             this.textBox20.ReadOnly = true;
             this.textBox20.Size = new System.Drawing.Size(100, 20);
@@ -259,7 +239,7 @@
             // acBtn7
             // 
             this.acBtn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.acBtn7.Location = new System.Drawing.Point(282, 320);
+            this.acBtn7.Location = new System.Drawing.Point(282, 171);
             this.acBtn7.Name = "acBtn7";
             this.acBtn7.Size = new System.Drawing.Size(43, 32);
             this.acBtn7.TabIndex = 109;
@@ -270,7 +250,7 @@
             // acBtn6
             // 
             this.acBtn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.acBtn6.Location = new System.Drawing.Point(282, 285);
+            this.acBtn6.Location = new System.Drawing.Point(282, 136);
             this.acBtn6.Name = "acBtn6";
             this.acBtn6.Size = new System.Drawing.Size(43, 32);
             this.acBtn6.TabIndex = 108;
@@ -281,7 +261,7 @@
             // acBtn5
             // 
             this.acBtn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.acBtn5.Location = new System.Drawing.Point(282, 250);
+            this.acBtn5.Location = new System.Drawing.Point(282, 101);
             this.acBtn5.Name = "acBtn5";
             this.acBtn5.Size = new System.Drawing.Size(43, 32);
             this.acBtn5.TabIndex = 107;
@@ -289,65 +269,45 @@
             this.acBtn5.UseVisualStyleBackColor = true;
             this.acBtn5.Click += new System.EventHandler(this.acBtn5_Click);
             // 
-            // acBtn4
+            // resettaBtn1
             // 
-            this.acBtn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.acBtn4.Location = new System.Drawing.Point(410, 144);
-            this.acBtn4.Name = "acBtn4";
-            this.acBtn4.Size = new System.Drawing.Size(43, 32);
-            this.acBtn4.TabIndex = 103;
-            this.acBtn4.Text = "AC";
-            this.acBtn4.UseVisualStyleBackColor = true;
-            this.acBtn4.Click += new System.EventHandler(this.acBtn4_Click);
+            this.resettaBtn1.ContextMenuStrip = this.contextMenuStrip1;
+            this.resettaBtn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resettaBtn1.Location = new System.Drawing.Point(410, 37);
+            this.resettaBtn1.Name = "resettaBtn1";
+            this.resettaBtn1.Size = new System.Drawing.Size(43, 32);
+            this.resettaBtn1.TabIndex = 100;
+            this.resettaBtn1.Text = "AC";
+            this.resettaBtn1.UseVisualStyleBackColor = true;
+            this.resettaBtn1.Click += new System.EventHandler(this.acBtn1_Click);
             // 
-            // acBtn3
+            // contextMenuStrip1
             // 
-            this.acBtn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.acBtn3.Location = new System.Drawing.Point(410, 107);
-            this.acBtn3.Name = "acBtn3";
-            this.acBtn3.Size = new System.Drawing.Size(43, 31);
-            this.acBtn3.TabIndex = 102;
-            this.acBtn3.Text = "AC";
-            this.acBtn3.UseVisualStyleBackColor = true;
-            this.acBtn3.Click += new System.EventHandler(this.acBtn3_Click);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem3});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(171, 48);
             // 
-            // acBtn2
+            // toolStripMenuItem1
             // 
-            this.acBtn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.acBtn2.Location = new System.Drawing.Point(410, 72);
-            this.acBtn2.Name = "acBtn2";
-            this.acBtn2.Size = new System.Drawing.Size(43, 32);
-            this.acBtn2.TabIndex = 101;
-            this.acBtn2.Text = "AC";
-            this.acBtn2.UseVisualStyleBackColor = true;
-            this.acBtn2.Click += new System.EventHandler(this.acBtn2_Click);
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(170, 22);
+            this.toolStripMenuItem1.Text = "Clear";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
-            // acBtn1
+            // toolStripMenuItem3
             // 
-            this.acBtn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.acBtn1.Location = new System.Drawing.Point(410, 37);
-            this.acBtn1.Name = "acBtn1";
-            this.acBtn1.Size = new System.Drawing.Size(43, 32);
-            this.acBtn1.TabIndex = 100;
-            this.acBtn1.Text = "AC";
-            this.acBtn1.UseVisualStyleBackColor = true;
-            this.acBtn1.Click += new System.EventHandler(this.acBtn1_Click);
-            // 
-            // clearBtn1
-            // 
-            this.clearBtn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearBtn1.Location = new System.Drawing.Point(378, 182);
-            this.clearBtn1.Name = "clearBtn1";
-            this.clearBtn1.Size = new System.Drawing.Size(75, 30);
-            this.clearBtn1.TabIndex = 99;
-            this.clearBtn1.Text = "Clear";
-            this.clearBtn1.UseVisualStyleBackColor = true;
-            this.clearBtn1.Click += new System.EventHandler(this.clearBtn_Click);
+            this.toolStripMenuItem3.ForeColor = System.Drawing.Color.Green;
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(170, 22);
+            this.toolStripMenuItem3.Text = "Clear all operation";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // clearBtn2
             // 
             this.clearBtn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearBtn2.Location = new System.Drawing.Point(378, 386);
+            this.clearBtn2.Location = new System.Drawing.Point(378, 237);
             this.clearBtn2.Name = "clearBtn2";
             this.clearBtn2.Size = new System.Drawing.Size(75, 30);
             this.clearBtn2.TabIndex = 98;
@@ -358,7 +318,7 @@
             // labelPow3
             // 
             this.labelPow3.AutoSize = true;
-            this.labelPow3.Location = new System.Drawing.Point(66, 331);
+            this.labelPow3.Location = new System.Drawing.Point(66, 182);
             this.labelPow3.Name = "labelPow3";
             this.labelPow3.Size = new System.Drawing.Size(36, 13);
             this.labelPow3.TabIndex = 97;
@@ -367,7 +327,7 @@
             // labelPow2
             // 
             this.labelPow2.AutoSize = true;
-            this.labelPow2.Location = new System.Drawing.Point(66, 296);
+            this.labelPow2.Location = new System.Drawing.Point(66, 147);
             this.labelPow2.Name = "labelPow2";
             this.labelPow2.Size = new System.Drawing.Size(36, 13);
             this.labelPow2.TabIndex = 96;
@@ -376,7 +336,7 @@
             // labelPow
             // 
             this.labelPow.AutoSize = true;
-            this.labelPow.Location = new System.Drawing.Point(66, 261);
+            this.labelPow.Location = new System.Drawing.Point(66, 112);
             this.labelPow.Name = "labelPow";
             this.labelPow.Size = new System.Drawing.Size(36, 13);
             this.labelPow.TabIndex = 95;
@@ -386,7 +346,7 @@
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(127, 320);
+            this.button3.Location = new System.Drawing.Point(127, 171);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(33, 33);
             this.button3.TabIndex = 94;
@@ -398,7 +358,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(127, 285);
+            this.button2.Location = new System.Drawing.Point(127, 136);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(33, 33);
             this.button2.TabIndex = 93;
@@ -410,7 +370,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(127, 250);
+            this.button1.Location = new System.Drawing.Point(127, 101);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(33, 33);
             this.button1.TabIndex = 92;
@@ -422,7 +382,7 @@
             // 
             this.textBox18.BackColor = System.Drawing.SystemColors.Window;
             this.textBox18.ContextMenuStrip = this.contextMenuStrip7;
-            this.textBox18.Location = new System.Drawing.Point(166, 328);
+            this.textBox18.Location = new System.Drawing.Point(166, 179);
             this.textBox18.Name = "textBox18";
             this.textBox18.ReadOnly = true;
             this.textBox18.Size = new System.Drawing.Size(100, 20);
@@ -461,7 +421,7 @@
             // 
             // textBox17
             // 
-            this.textBox17.Location = new System.Drawing.Point(17, 328);
+            this.textBox17.Location = new System.Drawing.Point(17, 179);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(43, 20);
             this.textBox17.TabIndex = 90;
@@ -471,7 +431,7 @@
             // 
             this.textBox16.BackColor = System.Drawing.SystemColors.Window;
             this.textBox16.ContextMenuStrip = this.contextMenuStrip6;
-            this.textBox16.Location = new System.Drawing.Point(166, 293);
+            this.textBox16.Location = new System.Drawing.Point(166, 144);
             this.textBox16.Name = "textBox16";
             this.textBox16.ReadOnly = true;
             this.textBox16.Size = new System.Drawing.Size(100, 20);
@@ -510,7 +470,7 @@
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(17, 293);
+            this.textBox15.Location = new System.Drawing.Point(17, 144);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(43, 20);
             this.textBox15.TabIndex = 88;
@@ -520,7 +480,7 @@
             // 
             this.textBox14.BackColor = System.Drawing.SystemColors.Window;
             this.textBox14.ContextMenuStrip = this.contextMenuStrip5;
-            this.textBox14.Location = new System.Drawing.Point(166, 258);
+            this.textBox14.Location = new System.Drawing.Point(166, 109);
             this.textBox14.Name = "textBox14";
             this.textBox14.ReadOnly = true;
             this.textBox14.Size = new System.Drawing.Size(100, 20);
@@ -559,7 +519,7 @@
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(17, 258);
+            this.textBox13.Location = new System.Drawing.Point(17, 109);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(43, 20);
             this.textBox13.TabIndex = 86;
@@ -569,7 +529,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 215);
+            this.label2.Location = new System.Drawing.Point(12, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 25);
             this.label2.TabIndex = 85;
@@ -584,42 +544,7 @@
             this.label1.Size = new System.Drawing.Size(65, 25);
             this.label1.TabIndex = 84;
             this.label1.Text = "Basic";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(12, 152);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 83;
-            this.textBox10.Validating += new System.ComponentModel.CancelEventHandler(this.textBox10_Validating);
-            // 
-            // labelImpartit
-            // 
-            this.labelImpartit.AutoSize = true;
-            this.labelImpartit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelImpartit.Location = new System.Drawing.Point(121, 147);
-            this.labelImpartit.Name = "labelImpartit";
-            this.labelImpartit.Size = new System.Drawing.Size(15, 24);
-            this.labelImpartit.TabIndex = 82;
-            this.labelImpartit.Text = ":";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(145, 152);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 81;
-            this.textBox11.Validating += new System.ComponentModel.CancelEventHandler(this.textBox11_Validating);
-            // 
-            // textBox12
-            // 
-            this.textBox12.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox12.ContextMenuStrip = this.contextMenuStrip4;
-            this.textBox12.Location = new System.Drawing.Point(290, 152);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(100, 20);
-            this.textBox12.TabIndex = 80;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // contextMenuStrip4
             // 
@@ -635,7 +560,6 @@
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
             this.toolStripMenuItem10.Size = new System.Drawing.Size(185, 22);
             this.toolStripMenuItem10.Text = "Clear";
-            this.toolStripMenuItem10.Click += new System.EventHandler(this.toolStripMenuItem10_Click);
             // 
             // toolStripMenuItem11
             // 
@@ -652,54 +576,6 @@
             this.toolStripMenuItem12.Text = "Clear all operation";
             this.toolStripMenuItem12.Click += new System.EventHandler(this.toolStripMenuItem12_Click);
             // 
-            // inmultireBtn
-            // 
-            this.inmultireBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inmultireBtn.ForeColor = System.Drawing.Color.Red;
-            this.inmultireBtn.Location = new System.Drawing.Point(251, 107);
-            this.inmultireBtn.Name = "inmultireBtn";
-            this.inmultireBtn.Size = new System.Drawing.Size(33, 33);
-            this.inmultireBtn.TabIndex = 79;
-            this.inmultireBtn.Text = "=";
-            this.inmultireBtn.UseVisualStyleBackColor = true;
-            this.inmultireBtn.Click += new System.EventHandler(this.inmultireBtn_Click);
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(12, 115);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 78;
-            this.textBox7.Validating += new System.ComponentModel.CancelEventHandler(this.textBox7_Validating);
-            // 
-            // labelOri
-            // 
-            this.labelOri.AutoSize = true;
-            this.labelOri.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOri.Location = new System.Drawing.Point(118, 109);
-            this.labelOri.Name = "labelOri";
-            this.labelOri.Size = new System.Drawing.Size(20, 24);
-            this.labelOri.TabIndex = 77;
-            this.labelOri.Text = "x";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(144, 115);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 76;
-            this.textBox8.Validating += new System.ComponentModel.CancelEventHandler(this.textBox8_Validating);
-            // 
-            // textBox9
-            // 
-            this.textBox9.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox9.ContextMenuStrip = this.contextMenuStrip3;
-            this.textBox9.Location = new System.Drawing.Point(290, 115);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 75;
-            // 
             // contextMenuStrip3
             // 
             this.contextMenuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -714,7 +590,6 @@
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
             this.toolStripMenuItem7.Size = new System.Drawing.Size(185, 22);
             this.toolStripMenuItem7.Text = "Clear";
-            this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
             // 
             // toolStripMenuItem8
             // 
@@ -731,50 +606,6 @@
             this.toolStripMenuItem9.Text = "Clear all operation";
             this.toolStripMenuItem9.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
             // 
-            // impartireBtn
-            // 
-            this.impartireBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.impartireBtn.ForeColor = System.Drawing.Color.Red;
-            this.impartireBtn.Location = new System.Drawing.Point(251, 144);
-            this.impartireBtn.Name = "impartireBtn";
-            this.impartireBtn.Size = new System.Drawing.Size(33, 33);
-            this.impartireBtn.TabIndex = 74;
-            this.impartireBtn.Text = "=";
-            this.impartireBtn.UseVisualStyleBackColor = true;
-            this.impartireBtn.Click += new System.EventHandler(this.impartireBtn_Click);
-            // 
-            // labelMinus
-            // 
-            this.labelMinus.AutoSize = true;
-            this.labelMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMinus.Location = new System.Drawing.Point(121, 76);
-            this.labelMinus.Name = "labelMinus";
-            this.labelMinus.Size = new System.Drawing.Size(16, 24);
-            this.labelMinus.TabIndex = 73;
-            this.labelMinus.Text = "-";
-            // 
-            // scadereBtn
-            // 
-            this.scadereBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scadereBtn.ForeColor = System.Drawing.Color.Red;
-            this.scadereBtn.Location = new System.Drawing.Point(251, 72);
-            this.scadereBtn.Name = "scadereBtn";
-            this.scadereBtn.Size = new System.Drawing.Size(33, 33);
-            this.scadereBtn.TabIndex = 72;
-            this.scadereBtn.Text = "=";
-            this.scadereBtn.UseVisualStyleBackColor = true;
-            this.scadereBtn.Click += new System.EventHandler(this.scadereBtn_Click);
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox6.ContextMenuStrip = this.contextMenuStrip2;
-            this.textBox6.Location = new System.Drawing.Point(290, 79);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 71;
-            // 
             // contextMenuStrip2
             // 
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -789,7 +620,6 @@
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(185, 22);
             this.toolStripMenuItem4.Text = "Clear";
-            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // toolStripMenuItem5
             // 
@@ -806,106 +636,55 @@
             this.toolStripMenuItem6.Text = "Clear all operation";
             this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
             // 
-            // textBox5
+            // risultatoTxtBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(145, 79);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 70;
-            this.textBox5.Validating += new System.ComponentModel.CancelEventHandler(this.textBox5_Validating);
+            this.risultatoTxtBox.BackColor = System.Drawing.SystemColors.Window;
+            this.risultatoTxtBox.ContextMenuStrip = this.contextMenuStrip1;
+            this.risultatoTxtBox.Location = new System.Drawing.Point(304, 44);
+            this.risultatoTxtBox.Name = "risultatoTxtBox";
+            this.risultatoTxtBox.ReadOnly = true;
+            this.risultatoTxtBox.Size = new System.Drawing.Size(100, 20);
+            this.risultatoTxtBox.TabIndex = 68;
+            this.risultatoTxtBox.Text = "0";
             // 
-            // textBox4
+            // number2txtBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(12, 80);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 69;
-            this.textBox4.Validating += new System.ComponentModel.CancelEventHandler(this.textBox4_Validating);
+            this.number2txtBox.ContextMenuStrip = this.contextMenuStrip1;
+            this.number2txtBox.Location = new System.Drawing.Point(159, 44);
+            this.number2txtBox.Name = "number2txtBox";
+            this.number2txtBox.Size = new System.Drawing.Size(100, 20);
+            this.number2txtBox.TabIndex = 66;
+            this.number2txtBox.Text = "0";
+            this.number2txtBox.Validating += new System.ComponentModel.CancelEventHandler(this.textBox2_Validating);
             // 
-            // textBox3
+            // number1txtBox
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox3.ContextMenuStrip = this.contextMenuStrip1;
-            this.textBox3.Location = new System.Drawing.Point(290, 44);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 68;
+            this.number1txtBox.ContextMenuStrip = this.contextMenuStrip1;
+            this.number1txtBox.Location = new System.Drawing.Point(12, 43);
+            this.number1txtBox.Name = "number1txtBox";
+            this.number1txtBox.Size = new System.Drawing.Size(100, 20);
+            this.number1txtBox.TabIndex = 65;
+            this.number1txtBox.Text = "0";
+            this.number1txtBox.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
             // 
-            // contextMenuStrip1
+            // calcolaBtn
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(186, 70);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(185, 22);
-            this.toolStripMenuItem1.Text = "Clear";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(185, 22);
-            this.toolStripMenuItem2.Text = "Clear basic operation";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.ForeColor = System.Drawing.Color.Green;
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(185, 22);
-            this.toolStripMenuItem3.Text = "Clear all operation";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
-            // 
-            // labelPlus
-            // 
-            this.labelPlus.AutoSize = true;
-            this.labelPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPlus.Location = new System.Drawing.Point(118, 39);
-            this.labelPlus.Name = "labelPlus";
-            this.labelPlus.Size = new System.Drawing.Size(21, 24);
-            this.labelPlus.TabIndex = 67;
-            this.labelPlus.Text = "+";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(145, 44);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 66;
-            this.textBox2.Validating += new System.ComponentModel.CancelEventHandler(this.textBox2_Validating);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 65;
-            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
-            // 
-            // adunareBtn
-            // 
-            this.adunareBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adunareBtn.ForeColor = System.Drawing.Color.Red;
-            this.adunareBtn.Location = new System.Drawing.Point(251, 37);
-            this.adunareBtn.Name = "adunareBtn";
-            this.adunareBtn.Size = new System.Drawing.Size(33, 33);
-            this.adunareBtn.TabIndex = 64;
-            this.adunareBtn.Text = "=";
-            this.adunareBtn.UseVisualStyleBackColor = true;
-            this.adunareBtn.Click += new System.EventHandler(this.adunareBtn_Click);
+            this.calcolaBtn.ContextMenuStrip = this.contextMenuStrip1;
+            this.calcolaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calcolaBtn.ForeColor = System.Drawing.Color.Red;
+            this.calcolaBtn.Location = new System.Drawing.Point(265, 37);
+            this.calcolaBtn.Name = "calcolaBtn";
+            this.calcolaBtn.Size = new System.Drawing.Size(33, 33);
+            this.calcolaBtn.TabIndex = 64;
+            this.calcolaBtn.Text = "=";
+            this.calcolaBtn.UseVisualStyleBackColor = true;
+            this.calcolaBtn.Click += new System.EventHandler(this.calcolaBtn_Click);
             // 
             // clearAllBtn
             // 
             this.clearAllBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearAllBtn.ForeColor = System.Drawing.Color.Green;
-            this.clearAllBtn.Location = new System.Drawing.Point(368, 610);
+            this.clearAllBtn.Location = new System.Drawing.Point(368, 452);
             this.clearAllBtn.Name = "clearAllBtn";
             this.clearAllBtn.Size = new System.Drawing.Size(85, 39);
             this.clearAllBtn.TabIndex = 115;
@@ -917,7 +696,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 419);
+            this.label3.Location = new System.Drawing.Point(12, 261);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 25);
             this.label3.TabIndex = 116;
@@ -955,7 +734,7 @@
             this.textBox21.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.textBox21.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBox21.ContextMenuStrip = this.contextMenuStrip9;
-            this.textBox21.Location = new System.Drawing.Point(86, 520);
+            this.textBox21.Location = new System.Drawing.Point(86, 362);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(100, 20);
             this.textBox21.TabIndex = 117;
@@ -995,7 +774,7 @@
             // 
             this.randomBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.randomBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.randomBtn.Location = new System.Drawing.Point(98, 450);
+            this.randomBtn.Location = new System.Drawing.Point(98, 292);
             this.randomBtn.Name = "randomBtn";
             this.randomBtn.Size = new System.Drawing.Size(88, 31);
             this.randomBtn.TabIndex = 118;
@@ -1007,7 +786,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 494);
+            this.label4.Location = new System.Drawing.Point(12, 336);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 20);
             this.label4.TabIndex = 119;
@@ -1017,7 +796,7 @@
             // 
             this.minLbl.AutoSize = true;
             this.minLbl.ForeColor = System.Drawing.Color.Green;
-            this.minLbl.Location = new System.Drawing.Point(9, 523);
+            this.minLbl.Location = new System.Drawing.Point(9, 365);
             this.minLbl.Name = "minLbl";
             this.minLbl.Size = new System.Drawing.Size(71, 13);
             this.minLbl.TabIndex = 120;
@@ -1027,7 +806,7 @@
             // 
             this.maxLbl.AutoSize = true;
             this.maxLbl.ForeColor = System.Drawing.Color.Green;
-            this.maxLbl.Location = new System.Drawing.Point(9, 552);
+            this.maxLbl.Location = new System.Drawing.Point(9, 394);
             this.maxLbl.Name = "maxLbl";
             this.maxLbl.Size = new System.Drawing.Size(74, 13);
             this.maxLbl.TabIndex = 121;
@@ -1065,7 +844,7 @@
             this.textBox22.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.textBox22.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBox22.ContextMenuStrip = this.contextMenuStrip10;
-            this.textBox22.Location = new System.Drawing.Point(86, 549);
+            this.textBox22.Location = new System.Drawing.Point(86, 391);
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(100, 20);
             this.textBox22.TabIndex = 122;
@@ -1105,7 +884,7 @@
             // 
             this.labelX.AutoSize = true;
             this.labelX.ContextMenuStrip = this.contextMenuStrip11;
-            this.labelX.Location = new System.Drawing.Point(14, 460);
+            this.labelX.Location = new System.Drawing.Point(14, 302);
             this.labelX.Name = "labelX";
             this.labelX.Size = new System.Drawing.Size(50, 13);
             this.labelX.TabIndex = 123;
@@ -1145,7 +924,7 @@
             // clearBtn3
             // 
             this.clearBtn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearBtn3.Location = new System.Drawing.Point(378, 575);
+            this.clearBtn3.Location = new System.Drawing.Point(378, 417);
             this.clearBtn3.Name = "clearBtn3";
             this.clearBtn3.Size = new System.Drawing.Size(75, 30);
             this.clearBtn3.TabIndex = 140;
@@ -1156,7 +935,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 656);
+            this.label5.Location = new System.Drawing.Point(4, 498);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(457, 13);
             this.label5.TabIndex = 141;
@@ -1165,7 +944,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(372, 679);
+            this.label6.Location = new System.Drawing.Point(372, 521);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 13);
             this.label6.TabIndex = 142;
@@ -1174,7 +953,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(12, 679);
+            this.linkLabel1.Location = new System.Drawing.Point(12, 521);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(57, 13);
             this.linkLabel1.TabIndex = 143;
@@ -1185,18 +964,35 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(179, 679);
+            this.label7.Location = new System.Drawing.Point(179, 521);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(105, 13);
             this.label7.TabIndex = 144;
             this.label7.Text = "Software Version 2.0";
+            // 
+            // operatorComboBox
+            // 
+            this.operatorComboBox.ContextMenuStrip = this.contextMenuStrip1;
+            this.operatorComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.operatorComboBox.FormattingEnabled = true;
+            this.operatorComboBox.Items.AddRange(new object[] {
+            "+",
+            "-",
+            "x",
+            ":"});
+            this.operatorComboBox.Location = new System.Drawing.Point(118, 38);
+            this.operatorComboBox.Name = "operatorComboBox";
+            this.operatorComboBox.Size = new System.Drawing.Size(35, 28);
+            this.operatorComboBox.TabIndex = 149;
+            this.operatorComboBox.Text = "+";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(464, 701);
+            this.ClientSize = new System.Drawing.Size(464, 545);
+            this.Controls.Add(this.operatorComboBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label6);
@@ -1219,11 +1015,7 @@
             this.Controls.Add(this.acBtn7);
             this.Controls.Add(this.acBtn6);
             this.Controls.Add(this.acBtn5);
-            this.Controls.Add(this.acBtn4);
-            this.Controls.Add(this.acBtn3);
-            this.Controls.Add(this.acBtn2);
-            this.Controls.Add(this.acBtn1);
-            this.Controls.Add(this.clearBtn1);
+            this.Controls.Add(this.resettaBtn1);
             this.Controls.Add(this.clearBtn2);
             this.Controls.Add(this.labelPow3);
             this.Controls.Add(this.labelPow2);
@@ -1239,26 +1031,10 @@
             this.Controls.Add(this.textBox13);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.labelImpartit);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.inmultireBtn);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.labelOri);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.impartireBtn);
-            this.Controls.Add(this.labelMinus);
-            this.Controls.Add(this.scadereBtn);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.labelPlus);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.adunareBtn);
+            this.Controls.Add(this.risultatoTxtBox);
+            this.Controls.Add(this.number2txtBox);
+            this.Controls.Add(this.number1txtBox);
+            this.Controls.Add(this.calcolaBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -1266,13 +1042,13 @@
             this.Text = "MathPaper";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.contextMenuStrip8.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.contextMenuStrip7.ResumeLayout(false);
             this.contextMenuStrip6.ResumeLayout(false);
             this.contextMenuStrip5.ResumeLayout(false);
             this.contextMenuStrip4.ResumeLayout(false);
             this.contextMenuStrip3.ResumeLayout(false);
             this.contextMenuStrip2.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
             this.contextMenuStrip9.ResumeLayout(false);
             this.contextMenuStrip10.ResumeLayout(false);
             this.contextMenuStrip11.ResumeLayout(false);
@@ -1291,11 +1067,7 @@
         private System.Windows.Forms.Button acBtn7;
         private System.Windows.Forms.Button acBtn6;
         private System.Windows.Forms.Button acBtn5;
-        private System.Windows.Forms.Button acBtn4;
-        private System.Windows.Forms.Button acBtn3;
-        private System.Windows.Forms.Button acBtn2;
-        private System.Windows.Forms.Button acBtn1;
-        private System.Windows.Forms.Button clearBtn1;
+        private System.Windows.Forms.Button resettaBtn1;
         private System.Windows.Forms.Button clearBtn2;
         private System.Windows.Forms.Label labelPow3;
         private System.Windows.Forms.Label labelPow2;
@@ -1311,26 +1083,10 @@
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label labelImpartit;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Button inmultireBtn;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label labelOri;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Button impartireBtn;
-        private System.Windows.Forms.Label labelMinus;
-        private System.Windows.Forms.Button scadereBtn;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label labelPlus;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button adunareBtn;
+        private System.Windows.Forms.TextBox risultatoTxtBox;
+        private System.Windows.Forms.TextBox number2txtBox;
+        private System.Windows.Forms.TextBox number1txtBox;
+        private System.Windows.Forms.Button calcolaBtn;
         private System.Windows.Forms.Button clearAllBtn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox21;
@@ -1346,7 +1102,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
@@ -1372,6 +1127,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem19;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem20;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem21;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip8;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem22;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem23;
@@ -1388,7 +1144,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem31;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem32;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem33;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox operatorComboBox;
     }
 }
 

@@ -16,3 +16,12 @@ C:\Users\AMdev\Desktop\Code\MathPaper\obj\Debug\MathPaper.csprojResolveAssemblyR
 C:\Users\AMdev\Desktop\Code\MathPaper\obj\Debug\MathPaper.Form1.resources
 C:\Users\AMdev\Desktop\Code\MathPaper\obj\Debug\MathPaper.Properties.Resources.resources
 C:\Users\AMdev\Desktop\Code\MathPaper\obj\Debug\MathPaper.csproj.GenerateResource.Cache
+E:\MathPaper\Collegamento a MathPaper-2.0-\MathPaper\bin\Debug\MathPaper.exe.config
+E:\MathPaper\Collegamento a MathPaper-2.0-\MathPaper\obj\Debug\MathPaper.exe
+E:\MathPaper\Collegamento a MathPaper-2.0-\MathPaper\obj\Debug\MathPaper.pdb
+E:\MathPaper\Collegamento a MathPaper-2.0-\MathPaper\bin\Debug\MathPaper.exe
+E:\MathPaper\Collegamento a MathPaper-2.0-\MathPaper\bin\Debug\MathPaper.pdb
+E:\MathPaper\Collegamento a MathPaper-2.0-\MathPaper\obj\Debug\MathPaper.csprojResolveAssemblyReference.cache
+E:\MathPaper\Collegamento a MathPaper-2.0-\MathPaper\obj\Debug\MathPaper.Form1.resources
+E:\MathPaper\Collegamento a MathPaper-2.0-\MathPaper\obj\Debug\MathPaper.Properties.Resources.resources
+E:\MathPaper\Collegamento a MathPaper-2.0-\MathPaper\obj\Debug\MathPaper.csproj.GenerateResource.Cache
